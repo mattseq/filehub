@@ -1,0 +1,22 @@
+services:
+  server:
+    build: ./server
+    ports:
+      - "8030:8030"
+    volumes:
+      - ./server:/app
+    env_file:
+      - ./server/.env.local
+    restart: on-failure:5
+  client:
+    build: ./client
+    ports:
+      - "8040:8040"
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    depends_on:
+      - server
+    env_file:
+      - ./client/.env.local
+    restart: on-failure:5
