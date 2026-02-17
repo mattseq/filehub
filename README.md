@@ -4,7 +4,7 @@ a simple file server for when discord and google drive fail you. this project is
 
 ## recommended
 
-first configure the URL to host at in `./client/.env.local`. configure the password, secret key, and storage directory in `./server/.env.local`.
+first configure the client and server URLs to host at in `./client/.env.local`. configure server URL, the password, secret key, and storage directory in `./server/.env.local`.
 then just run the docker images, these handle everything for you :)
 
 in the root directory:
